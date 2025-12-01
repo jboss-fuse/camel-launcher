@@ -268,7 +268,7 @@
             <plugin>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-repackager-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${camel-community-version}</version>
                 <executions>
                     <execution>
                         <id>repackage-executable</id>
