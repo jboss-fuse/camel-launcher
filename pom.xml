@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jbang-parent</artifactId>
-        <version>4.14.2.redhat-00009</version>
+        <version>4.14.2.redhat-00010</version>
     </parent>
 
     <artifactId>camel-launcher</artifactId>
@@ -42,10 +42,10 @@
 
         <!-- Launcher configuration properties -->
         <quarkus.version>3.27.0.redhat-00002</quarkus.version>
-        <camel-version>4.14.2.redhat-00009</camel-version>
+        <camel-version>4.14.2.redhat-00010</camel-version>
         <camel-community-version>4.14.2</camel-community-version>
-        <camel-kamelets-version>4.14.2.redhat-00008</camel-kamelets-version>
-        <camel-spring-boot-version>4.14.2.redhat-00010</camel-spring-boot-version>
+        <camel-kamelets-version>4.14.2.redhat-00009</camel-kamelets-version>
+        <camel-spring-boot-version>4.14.2.redhat-00013</camel-spring-boot-version>
         <maven.repos>central=https://repo1.maven.org/maven2,redhat.ga=https://maven.repository.redhat.com/ga/</maven.repos>
 
         <!-- Dependency versions -->
