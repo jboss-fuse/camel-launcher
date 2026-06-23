@@ -63,7 +63,53 @@
         <httpcore-version>4.4.16</httpcore-version>
         <commons-codec-version>1.21.0</commons-codec-version>
         <jcl-over-slf4j-version>1.7.36</jcl-over-slf4j-version>
+        <vertx-version>4.5.28</vertx-version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-core</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-web</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-web-client</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-web-common</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-auth-common</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-auth-properties</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-auth-jwt</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-bridge-common</artifactId>
+                <version>${vertx-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
