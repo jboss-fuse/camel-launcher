@@ -28,7 +28,7 @@
     </parent>
 
     <artifactId>camel-launcher</artifactId>
-    <version>4.18.1-SNAPSHOT</version>
+    <version>4.18.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Camel :: Launcher</name>
