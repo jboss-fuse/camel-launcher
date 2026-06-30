@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jbang-parent</artifactId>
-        <version>4.18.1.redhat-00001</version>
+        <version>4.18.3.redhat-00001</version>
     </parent>
 
     <artifactId>camel-launcher</artifactId>
