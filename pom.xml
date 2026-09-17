@@ -41,7 +41,7 @@
         <camel-prepare-component>false</camel-prepare-component>
 
         <!-- Launcher configuration properties -->
-        <quarkus.version>3.27.0.redhat-00002</quarkus.version>
+        <quarkus.version>3.39.0</quarkus.version>
         <camel-version>4.22.1-SNAPSHOT</camel-version>
         <camel-community-version>4.22.1</camel-community-version>
         <camel-kamelets-version>4.22.1-SNAPSHOT</camel-kamelets-version>
