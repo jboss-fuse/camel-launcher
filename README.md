@@ -84,3 +84,11 @@ camel-launcher-<version>.jar
 ```
 
 This structure provides better performance and reliability compared to traditional fat JARs where all classes are merged together.
+
+## Maven repository defaults
+
+The filtered `camel-launcher.properties` supplies `${maven.repos}` as both `camel.jbang.repos`
+and `camel.default.extra.repos.default.value`. The latter supplies a baseline to all Camel Maven
+downloaders, including `camel doctor`. Users can override the baseline with the `camel.extra.repos`
+JVM system property. Product builds should configure repositories appropriate to their audience;
+customer distributions use the public Red Hat repository rather than internal Indy endpoints.

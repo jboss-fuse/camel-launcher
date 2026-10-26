@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Test for the CamelLauncher.
  */
-public class CamelLauncherTest {
+class CamelLauncherTest {
 
     /**
      * A simple PrintStream-based Printer implementation for testing.
@@ -62,7 +62,7 @@ public class CamelLauncherTest {
     }
 
     @Test
-    public void testLauncherVersion() {
+    void testLauncherVersion() {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos);
 
@@ -81,6 +81,6 @@ public class CamelLauncherTest {
         CamelJBangMain.run(main, "version");
 
         String output = baos.toString();
-        assertTrue(output.contains("Camel JBang version:"), "Output should contain version information");
+        assertTrue(output.contains("Camel CLI version:"), "Output should contain version information");
     }
 }
