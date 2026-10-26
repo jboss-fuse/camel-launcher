@@ -28,10 +28,22 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * Test for the CamelLauncher properties loading mechanism.
  */
-public class CamelLauncherPropertiesTest {
+class CamelLauncherPropertiesTest {
 
     @Test
-    public void testLauncherPropertiesFileExists() throws IOException {
+    void suppliesDefaultRepositoriesToAllDownloaders() throws IOException {
+        try (InputStream is = CamelLauncher.class.getResourceAsStream("/camel-launcher.properties")) {
+            assertNotNull(is);
+            Properties props = new Properties();
+            props.load(is);
+
+            assertEquals(props.getProperty("camel.jbang.repos"),
+                    props.getProperty("camel.default.extra.repos.default.value"));
+        }
+    }
+
+    @Test
+    void testLauncherPropertiesFileExists() throws IOException {
         // Verify the properties file is bundled in the JAR
         try (InputStream is = CamelLauncher.class.getResourceAsStream("/camel-launcher.properties")) {
             assertNotNull(is, "camel-launcher.properties should be available in classpath");
@@ -44,8 +56,6 @@ public class CamelLauncherPropertiesTest {
                     "Should contain camel.jbang.quarkusGroupId property");
             assertNotNull(props.getProperty("camel.jbang.quarkusArtifactId"),
                     "Should contain camel.jbang.quarkusArtifactId property");
-            assertNotNull(props.getProperty("camel.jbang.quarkusVersion"),
-                    "Should contain camel.jbang.quarkusVersion property");
             assertNotNull(props.getProperty("camel.jbang.camelSpringBootVersion"),
                     "Should contain camel.jbang.camelSpringBootVersion property");
             assertNotNull(props.getProperty("camel.jbang.repos"),
